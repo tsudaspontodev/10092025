@@ -14,14 +14,133 @@
 
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* text-align: center; */
+    
 }
 
 /* Cabeçalho */
 
 .site-header {
-    background: linear-gradient (90deg, #1e40af, #2563eb);
+    background: linear-gradient(90deg, #1e40af, #2563eb);
     color: #fff;
     padding: 24px 16px;
     text-align: center;
 
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+main {
+    max-width: 720px;
+    /* Largura maxima do conteúdo */
+    margin: 24px auto;
+    /* Centraliza na página */
+    padding: 0 16px;
+    /* Respiro lateral em telas pequenas */
+}
+
+.card {
+    background: var(--card);
+    /* Cor de fundo do cartão  */
+    border-radius: 16px;
+    /* Cantos arredondados */
+    padding: 20px;
+    /* Espaço entre o conteudo e as bordas */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .08);
+    /* Sombra em volta do cartão */
+    border: 1px solid #e5e7eb;
+    /* Linha da borda do cartão */
+}
+
+h2 {
+    margin-top: 0;
+}
+
+p {
+    margin: 8px 0 16px;
+    color: var(--muted);
+}
+
+label {
+    display: block;
+    /* Quebra de linha  */
+    margin-top: 12px;
+    font-weight: 600;
+    color: #111827;
+    
+}
+
+
+input {
+    width: 100%;
+    /* ocupa todo espaço do cartão */
+    padding: 10px 12px;
+    /* espaço entre o conteudo e a borda */
+    border: 1px solid #d1d5db;
+    /* linha da borda do compo de texto */
+    border-radius: 10px;
+    /* arredonda os cantos */
+    outline: none;
+
+    margin-top: 6px;
+    /* margem do topo */
+    font-size: 1rem;
+    /* Altera o tamanho da fonte == a 16px */
+}
+
+input:focus {
+    border-color: var(--brand);
+    /* Altera a cor da borda quando se esta no foco */
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, .15);
+    /* Altera a sombra da borda quando se esta no foco */
+}
+
+button {
+    margin-top: 16px;
+    /* Altera o espaçamento da parte de cima */
+    padding: 12px 16px;
+    /* Altera o espaçamento em volta do conteudo para a borda do campo */
+    border-radius: 12px;
+    /* Deixa os cantos arredondado */
+    border: none;
+    /* Deixa sem borda */
+    cursor: pointer;
+    /* Altera o ponteiro do mouse quando se passa por cima */
+    background: var(--brand);
+    /* altera o fundo do botão utilizando a variavel */
+    color: white;
+    /* Altera a cor da fonte  */
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+button:hover {
+    filter: brightness(2);
+    /* Deixa o botão mais claro ao passar por cima */
+    color: blue;
+    /* Altera a cor da fonte */
+}
+
+button:active {
+    transform: translateY(1px);
+    /* Ao prescionar o botão ele movimento no eixo Y (baixo) */
+}
+
+#resultado {
+    margin-top: 14px;
+    /* Altera o epassamento  */
+    font-size: 1.05rem;
+    /* Altera o tamanho da fonte  */
+    color: #111827;
+    /* Altera a cor da fonte  */
+}
+
+/* Rodapé */
+.site-footer {
+    padding: 14px 16px;
+    text-align: center;
+    color: var(--muted);
 }

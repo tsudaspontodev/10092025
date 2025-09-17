@@ -26,7 +26,31 @@ botaoCalcular.addEventListener('click', () => {
         return; //Saí da função sem continuar
     }
 
-    const idade = anoAtual - anoNasc
-    resultado.textContent = (`${nome}, tem ${idade} anos de idade`);
+    const idade = anoAtual - anoNasc;
+    //resultado.textContent = (`${nome}, tem ${idade} anos de idade`);
+
+    const nomeDefault = nome || 'Visitante';
+
+    const mensagem = `Olá, ${nomeDefault}! Você tem ${idade} anos em ${anoAtual}`;
+
+    resultado.textContent = mensagem
+
+    inputNome.select()
+
 });
 
+[inputNome, inputAno].forEach(campo => {
+    campo.addEventListener('keydown', (evento) => {
+        if (evento.key === 'Enter') {
+            botaoCalcular.click();
+        }
+    })
+});
+
+botaoCalcular.addEventListener('mouseenter', () => {
+    botaoCalcular.dataset.labelAntiga = botaoCalcular.textContent; 
+    botaoCalcular.textContent = 'Clique aqui!';
+});
+botaoCalcular.addEventListener('mouseleave', () => {
+    botaoCalcular.textContent = botaoCalcular.dataset.labelAntiga || 'Calcular idade';
+});
